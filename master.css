@@ -11,14 +11,16 @@
 
 #section_one {
   width: 100%;
-  height: calc(100% - 100px);
+  height: calc(100% - 120px);
   background: pink;
 }
 
 #section_two {
   width: 100%;
-  height: 100px;
+  height: 120px;
   background: #282828;
+  display: flex;
+
 }
 
 /*NAVBAR SINISTRA*/
@@ -62,7 +64,6 @@
   font-family: verdana;
   font-weight: 600;
   color: lightgray;
-
 }
 
 .nav_cont_flex a:hover {
@@ -80,8 +81,6 @@
   bottom: 0;
   margin-left: -15px;
 }
-
-
 
 #col_right h2 {
   color: white;
@@ -114,7 +113,6 @@
   color: white;
 }
 
-
 /*recently played*/
 .played_cont_flex {
   display: flex;
@@ -134,7 +132,47 @@
   border-radius: 50%;
 }
 
+/*media player*/
+.media_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 14%;
+}
 
+#little_cover {
+  width: 90px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.media_left a {
+  text-decoration: none;
+  font-size: 10px;
+  font-family: verdana;
+  font-weight: 600;
+  color: white;
+}
+
+.media_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 70%;
+}
+
+.media_center img {
+  width: 30px;
+  height: auto;
+  margin: 0 20px;
+}
+
+.control_button {
+  padding-bottom: 15px;
+}
 
 
 
