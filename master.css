@@ -5,7 +5,7 @@
 }
 
 #container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -20,7 +20,6 @@
   height: 120px;
   background: #282828;
   display: flex;
-
 }
 
 /*NAVBAR SINISTRA*/
@@ -29,15 +28,15 @@
   height: 100%;
   background: #0C0F12;
   float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   overflow: auto;
+  padding-left: 20px;
 }
 
 .nav_header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 30%;
 }
 
 #logo_large {
@@ -47,28 +46,76 @@
 
 .navbar_home {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 
 .navbar_home li {
   list-style-type: none;
-}
-
-.navbar_home li img {
-  width: 30px;
-
+  padding-bottom: 20px;
 }
 
 .navbar_home a {
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 12px;
+  font-size: 15px;
   font-family: verdana;
   font-weight: 600;
   color: lightgray;
 }
+
+.navbar_home a:hover,
+.recently a:hover,
+.user a:hover {
+  color: white;
+}
+
+.fa-home, .fa-search,
+.fa-book, .fa-download,
+.fa-user {
+  font-size: 20px;
+  padding-right: 15px;
+}
+
+.recently {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recently li {
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+
+.recently a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: verdana;
+  font-weight: 400;
+  color: lightgray;
+}
+
+
+
+.user {
+  display: flex;
+  flex-direction: column;
+}
+
+.user a {
+  text-decoration: none;
+  font-size: 12px;
+  font-family: verdana;
+  font-weight: 400;
+  color: lightgray;
+}
+
+.user div:first-child {
+  padding-bottom: 10px;
+}
+
+.user div:last-child {
+  padding-top: 10px;
+}
+
 
 
 
@@ -81,7 +128,6 @@
   height: 100%;
   background-image: linear-gradient(to bottom right, rgb(186, 152, 3), rgb(79, 63, 2));
   float: left;
-  padding: 3% 10%;
   overflow: auto;
   text-align: center;
 }
@@ -91,7 +137,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 0 5%;
+  padding: 3% 20% 0;
 }
 
 .nav_cont_flex li {
@@ -131,22 +177,25 @@
   font-family: verdana;
   font-size: 30px;
   font-weight: 600;
-  padding: 5% 0;
+  padding: 3% 10%;
   text-align: left;
 }
 
 #col_right img {
-  width: 200px;
+  width: 190px;
   height: auto;
-  padding-top: 10%;
-  padding-bottom: 3%;
 }
 
 /*album image*/
 .album_cont_flex {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0 10%;
+}
+
+.album_cont_flex div {
+  padding-right: 5px;
+  padding-bottom: 20px;
 }
 
 .album_cont_flex a {
@@ -160,8 +209,13 @@
 /*recently played*/
 .played_cont_flex {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0 10%;
+}
+
+.played_cont_flex div {
+  padding-right: 5px;
+  padding-bottom: 20px;
 }
 
 .played_cont_flex a {
@@ -181,7 +235,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 14%;
 }
 
